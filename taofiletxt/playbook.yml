@@ -1,9 +1,16 @@
 # Playbook cho tất cả các host
 - hosts: all
   tasks:
+    - name: Make folder 
+      file:
+        path: /home/isofh/demo1
+        state: directory
+        # owner: isofh
+        # group: isofh
+        mode: "0755"
     - name: Tao file 
       file:
-        path: /home/isofh/test.txt
+        path: /home/isofh/demo1/test.txt
         state: touch
         # owner: isofh
         # group: isofh
