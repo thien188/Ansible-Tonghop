@@ -1,0 +1,10 @@
+# Playbook cho tất cả các host
+- hosts: all
+  tasks:
+    - name: Tao file 
+      file:
+        path: /home/isofh/test.txt
+        state: touch
+        # owner: isofh
+        # group: isofh
+        mode: "0755"
