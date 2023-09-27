@@ -1,0 +1,10 @@
+# Playbook cho tất cả các host
+- hosts: all
+  tasks:
+    - name: Delete folder 
+      file:
+        path: /home/isofh/demo1
+        state: absent
+        # owner: isofh
+        # group: isofh
+        mode: "0755"
